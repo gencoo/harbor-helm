@@ -804,7 +804,7 @@ exporter:
     priorityClassName:
 
 metrics:
-  enabled: false
+  enabled: true
   core:
     path: /metrics
     port: 8001
@@ -822,8 +822,9 @@ metrics:
   ## https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md
   ##
   serviceMonitor:
-    enabled: false
-    additionalLabels: {}
+    enabled: true
+    additionalLabels:
+      monitor: enabled
     # Scrape interval. If not set, the Prometheus default scrape interval is used.
     interval: ""
     # Metric relabel configs to apply to samples before ingestion.
